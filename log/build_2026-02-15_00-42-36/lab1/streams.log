@@ -1,0 +1,58 @@
+[0.012s] Invoking command in '/home/b/FRA532-LAB/build/lab1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/b/microros_ws/install/sensor_msgs_py:/opt/ros/humble /usr/bin/cmake --build /home/b/FRA532-LAB/build/lab1 -- -j12 -l12
+[0.049s] [35m[1mConsolidate compiler generated dependencies of target cpp_node_test[0m
+[0.061s] [100%] Built target cpp_node_test
+[0.067s] [100%] Built target ament_cmake_python_copy_lab1
+[0.272s] running egg_info
+[0.272s] writing lab1.egg-info/PKG-INFO
+[0.272s] writing dependency_links to lab1.egg-info/dependency_links.txt
+[0.273s] writing top-level names to lab1.egg-info/top_level.txt
+[0.274s] reading manifest file 'lab1.egg-info/SOURCES.txt'
+[0.274s] writing manifest file 'lab1.egg-info/SOURCES.txt'
+[0.294s] [100%] Built target ament_cmake_python_build_lab1_egg
+[0.304s] Invoked command in '/home/b/FRA532-LAB/build/lab1' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/b/microros_ws/install/sensor_msgs_py:/opt/ros/humble /usr/bin/cmake --build /home/b/FRA532-LAB/build/lab1 -- -j12 -l12
+[0.314s] Invoking command in '/home/b/FRA532-LAB/build/lab1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/b/microros_ws/install/sensor_msgs_py:/opt/ros/humble /usr/bin/cmake --install /home/b/FRA532-LAB/build/lab1
+[0.321s] -- Install configuration: ""
+[0.321s] -- Up-to-date: /home/b/FRA532-LAB/install/lab1/share/lab1/environment/pythonpath.sh
+[0.321s] -- Up-to-date: /home/b/FRA532-LAB/install/lab1/share/lab1/environment/pythonpath.dsv
+[0.321s] -- Up-to-date: /home/b/FRA532-LAB/install/lab1/local/lib/python3.10/dist-packages/lab1-0.0.0-py3.10.egg-info
+[0.321s] -- Installing: /home/b/FRA532-LAB/install/lab1/local/lib/python3.10/dist-packages/lab1-0.0.0-py3.10.egg-info/SOURCES.txt
+[0.321s] -- Installing: /home/b/FRA532-LAB/install/lab1/local/lib/python3.10/dist-packages/lab1-0.0.0-py3.10.egg-info/dependency_links.txt
+[0.321s] -- Installing: /home/b/FRA532-LAB/install/lab1/local/lib/python3.10/dist-packages/lab1-0.0.0-py3.10.egg-info/top_level.txt
+[0.321s] -- Installing: /home/b/FRA532-LAB/install/lab1/local/lib/python3.10/dist-packages/lab1-0.0.0-py3.10.egg-info/PKG-INFO
+[0.321s] -- Up-to-date: /home/b/FRA532-LAB/install/lab1/local/lib/python3.10/dist-packages/lab1
+[0.321s] -- Up-to-date: /home/b/FRA532-LAB/install/lab1/local/lib/python3.10/dist-packages/lab1/dummy_module.py
+[0.321s] -- Up-to-date: /home/b/FRA532-LAB/install/lab1/local/lib/python3.10/dist-packages/lab1/__init__.py
+[0.355s] Listing '/home/b/FRA532-LAB/install/lab1/local/lib/python3.10/dist-packages/lab1'...
+[0.357s] -- Up-to-date: /home/b/FRA532-LAB/install/lab1/lib/lab1/wheel_odometry.py
+[0.357s] -- Up-to-date: /home/b/FRA532-LAB/install/lab1/lib/lab1/ekf_odometry.py
+[0.358s] -- Up-to-date: /home/b/FRA532-LAB/install/lab1/lib/lab1/icp_odometry.py
+[0.358s] -- Up-to-date: /home/b/FRA532-LAB/install/lab1/lib/lab1/slam.py
+[0.358s] -- Up-to-date: /home/b/FRA532-LAB/install/lab1/lib/lab1/analyze_trajectories.py
+[0.358s] -- Up-to-date: /home/b/FRA532-LAB/install/lab1/lib/lab1/cpp_node_test
+[0.358s] -- Up-to-date: /home/b/FRA532-LAB/install/lab1/share/lab1/launch
+[0.358s] -- Up-to-date: /home/b/FRA532-LAB/install/lab1/share/lab1/launch/part2_complete.launch.py
+[0.358s] -- Up-to-date: /home/b/FRA532-LAB/install/lab1/share/lab1/launch/plot_analysis.launch.py
+[0.358s] -- Up-to-date: /home/b/FRA532-LAB/install/lab1/share/lab1/launch/part1_complete.launch.py
+[0.358s] -- Up-to-date: /home/b/FRA532-LAB/install/lab1/share/lab1/launch/part3_complete.launch.py
+[0.358s] -- Up-to-date: /home/b/FRA532-LAB/install/lab1/share/lab1/rviz
+[0.358s] -- Up-to-date: /home/b/FRA532-LAB/install/lab1/share/lab1/rviz/part3.rviz
+[0.358s] -- Up-to-date: /home/b/FRA532-LAB/install/lab1/share/lab1/rviz/part2.rviz
+[0.358s] -- Up-to-date: /home/b/FRA532-LAB/install/lab1/share/lab1/rviz/part1.rviz
+[0.358s] -- Up-to-date: /home/b/FRA532-LAB/install/lab1/share/lab1/config
+[0.358s] -- Up-to-date: /home/b/FRA532-LAB/install/lab1/share/lab1/config/slam_toolbox_params.yaml
+[0.358s] -- Up-to-date: /home/b/FRA532-LAB/install/lab1/share/ament_index/resource_index/package_run_dependencies/lab1
+[0.358s] -- Up-to-date: /home/b/FRA532-LAB/install/lab1/share/ament_index/resource_index/parent_prefix_path/lab1
+[0.358s] -- Up-to-date: /home/b/FRA532-LAB/install/lab1/share/lab1/environment/ament_prefix_path.sh
+[0.358s] -- Up-to-date: /home/b/FRA532-LAB/install/lab1/share/lab1/environment/ament_prefix_path.dsv
+[0.358s] -- Up-to-date: /home/b/FRA532-LAB/install/lab1/share/lab1/environment/path.sh
+[0.358s] -- Up-to-date: /home/b/FRA532-LAB/install/lab1/share/lab1/environment/path.dsv
+[0.358s] -- Up-to-date: /home/b/FRA532-LAB/install/lab1/share/lab1/local_setup.bash
+[0.358s] -- Up-to-date: /home/b/FRA532-LAB/install/lab1/share/lab1/local_setup.sh
+[0.359s] -- Up-to-date: /home/b/FRA532-LAB/install/lab1/share/lab1/local_setup.zsh
+[0.359s] -- Up-to-date: /home/b/FRA532-LAB/install/lab1/share/lab1/local_setup.dsv
+[0.359s] -- Up-to-date: /home/b/FRA532-LAB/install/lab1/share/lab1/package.dsv
+[0.359s] -- Up-to-date: /home/b/FRA532-LAB/install/lab1/share/ament_index/resource_index/packages/lab1
+[0.359s] -- Up-to-date: /home/b/FRA532-LAB/install/lab1/share/lab1/cmake/lab1Config.cmake
+[0.359s] -- Up-to-date: /home/b/FRA532-LAB/install/lab1/share/lab1/cmake/lab1Config-version.cmake
+[0.359s] -- Up-to-date: /home/b/FRA532-LAB/install/lab1/share/lab1/package.xml
+[0.360s] Invoked command in '/home/b/FRA532-LAB/build/lab1' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/b/microros_ws/install/sensor_msgs_py:/opt/ros/humble /usr/bin/cmake --install /home/b/FRA532-LAB/build/lab1

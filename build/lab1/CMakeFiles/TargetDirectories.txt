@@ -1,0 +1,12 @@
+/home/b/FRA532-LAB/build/lab1/CMakeFiles/uninstall.dir
+/home/b/FRA532-LAB/build/lab1/CMakeFiles/lab1_uninstall.dir
+/home/b/FRA532-LAB/build/lab1/CMakeFiles/ament_cmake_python_copy_lab1.dir
+/home/b/FRA532-LAB/build/lab1/CMakeFiles/ament_cmake_python_build_lab1_egg.dir
+/home/b/FRA532-LAB/build/lab1/CMakeFiles/cpp_node_test.dir
+/home/b/FRA532-LAB/build/lab1/CMakeFiles/test.dir
+/home/b/FRA532-LAB/build/lab1/CMakeFiles/edit_cache.dir
+/home/b/FRA532-LAB/build/lab1/CMakeFiles/rebuild_cache.dir
+/home/b/FRA532-LAB/build/lab1/CMakeFiles/list_install_components.dir
+/home/b/FRA532-LAB/build/lab1/CMakeFiles/install.dir
+/home/b/FRA532-LAB/build/lab1/CMakeFiles/install/local.dir
+/home/b/FRA532-LAB/build/lab1/CMakeFiles/install/strip.dir
