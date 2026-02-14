@@ -5,13 +5,13 @@ Localization pipeline for TurtleBot3 Burger using ROS2 Humble. Progressively int
 ## Project Structure
 
 ```
-FRA532-LAB1/
+FRA532-LAB/
 ├── src/lab1/
 │   ├── scripts/
 │   │   ├── wheel_odometry.py       # Baseline: differential-drive wheel odometry
 │   │   ├── ekf_odometry.py         # Part 1: EKF sensor fusion (wheel + IMU)
 │   │   ├── icp_odometry.py         # Part 2: ICP scan-to-local-map refinement
-│   │   ├── slam.py                 # Part 3: SLAM trajectory recorder + TF publisher
+│   │   ├── slam.py                 # Part 3: SLAM trajectory recorder
 │   │   └── analyze_trajectories.py # Trajectory comparison plots and metrics
 │   ├── launch/
 │   │   ├── part1_complete.launch.py  # Part 1: wheel + EKF
@@ -52,6 +52,24 @@ FRA532-LAB1/
 
 ---
 
+## Installation and Dependencies
+
+- ROS2 Humble
+- Python 3.10+
+- `numpy`, `scipy`, `matplotlib`, `pandas`, `Pillow`
+- `tf_transformations`
+- `slam_toolbox` (Part 3)
+
+```bash
+git clone -b LAB1 https://github.com/bpbb/FRA532-LAB.git
+```
+
+```bash
+cd FRA532-LAB
+colcon build
+source install/setup.bash
+```
+
 ## Part 1: EKF Odometry Fusion
 
 ### Overview
@@ -91,11 +109,8 @@ Fuses wheel odometry (`/joint_states`) with IMU measurements (`/imu`) using an E
 ### How to Run
 
 ```bash
-cd ~/FRA532-LAB1
-source install/setup.bash
-
 ros2 launch lab1 part1_complete.launch.py \
-    bag_path:=$HOME/FRA532-LAB1/FRA532_LAB1_DATASET/fibo_floor3_seq00
+    bag_path:=FRA532_LAB1_DATASET/fibo_floor3_seq00
 ```
 
 Replace `seq00` with `seq01` or `seq02` for other sequences.
@@ -144,11 +159,8 @@ Refines EKF odometry using LiDAR scan matching. Matches each scan against a **lo
 ### How to Run
 
 ```bash
-cd ~/FRA532-LAB1
-source install/setup.bash
-
 ros2 launch lab1 part2_complete.launch.py \
-    bag_path:=$HOME/FRA532-LAB1/FRA532_LAB1_DATASET/fibo_floor3_seq00
+    bag_path:=FRA532_LAB1_DATASET/fibo_floor3_seq00
 ```
 
 ---
@@ -174,11 +186,8 @@ Uses `slam_toolbox` (online async mode) to perform graph-based SLAM with loop cl
 ### How to Run
 
 ```bash
-cd ~/FRA532-LAB1
-source install/setup.bash
-
 ros2 launch lab1 part3_complete.launch.py \
-    bag_path:=$HOME/FRA532-LAB1/FRA532_LAB1_DATASET/fibo_floor3_seq00
+    bag_path:=FRA532_LAB1_DATASET/fibo_floor3_seq00
 ```
 
 ---
@@ -188,9 +197,6 @@ ros2 launch lab1 part3_complete.launch.py \
 After running sequences through Part 1/2/3, trajectory files and maps are saved to `results/`. Generate comparison plots and metrics:
 
 ```bash
-cd ~/FRA532-LAB1
-source install/setup.bash
-
 # Single sequence
 ros2 launch lab1 plot_analysis.launch.py sequences:="00"
 
@@ -205,29 +211,20 @@ Output is saved to `results/analysis/`.
 ## Run All Sequences
 
 ```bash
-cd ~/FRA532-LAB1
-source install/setup.bash
-
 # Part 3 - Sequence 00
 ros2 launch lab1 part3_complete.launch.py \
-    bag_path:=$HOME/FRA532-LAB1/FRA532_LAB1_DATASET/fibo_floor3_seq00
+    bag_path:FRA532_LAB1_DATASET/fibo_floor3_seq00
 
 # Part 3 - Sequence 01
 ros2 launch lab1 part3_complete.launch.py \
-    bag_path:=$HOME/FRA532-LAB1/FRA532_LAB1_DATASET/fibo_floor3_seq01
+    bag_path:=FRA532_LAB1_DATASET/fibo_floor3_seq01
 
 # Part 3 - Sequence 02
 ros2 launch lab1 part3_complete.launch.py \
-    bag_path:=$HOME/FRA532-LAB1/FRA532_LAB1_DATASET/fibo_floor3_seq02
+    bag_path:=FRA532_LAB1_DATASET/fibo_floor3_seq02
 
 # Plot & analyze all sequences
 ros2 launch lab1 plot_analysis.launch.py sequences:="00 01 02"
 ```
 
-## Dependencies
 
-- ROS2 Humble
-- Python 3.10+
-- `numpy`, `scipy`, `matplotlib`, `pandas`, `Pillow`
-- `tf_transformations`
-- `slam_toolbox` (Part 3)
