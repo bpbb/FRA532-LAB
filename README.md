@@ -232,7 +232,7 @@ ros2 launch lab1 plot_analysis.launch.py sequences:="00 01 02"
 
 For a comprehensive analysis of the experimental results, including trajectory comparisons, accuracy metrics, drift analysis, and robustness evaluation across all three sequences, see:
 
-**📊 [Discussion: Comparing Odometry and SLAM Methods](discussion.md)**
+**[Discussion: Comparing Odometry and SLAM Methods](discussion.md)**
 
 This document includes:
 - Accuracy comparison (position error vs SLAM)
