@@ -20,6 +20,10 @@ Four localization methods were evaluated across three sequences recorded on a Tu
 | EKF    | 2.930          | 0.640          | 2.620          |
 | ICP    | 0.990          | 0.990          | 1.170          |
 
+![Metrics Comparison - Sequence 00](results/analysis/metrics_comparison_seq00.png)
+![Metrics Comparison - Sequence 01](results/analysis/metrics_comparison_seq01.png)
+![Metrics Comparison - Sequence 02](results/analysis/metrics_comparison_seq02.png)
+
 **Observations:**
 
 - **ICP is the most consistently accurate** method across all three sequences, with mean error vs SLAM staying around 1.0m. The LiDAR scan matching provides absolute position corrections that prevent drift from accumulating.
@@ -35,12 +39,21 @@ Four localization methods were evaluated across three sequences recorded on a Tu
 Drift is the accumulated position error over time. The following shows how error grows throughout each trajectory:
 
 ### Sequence 00 (Empty Hallway)
+
+![Trajectory Comparison - Sequence 00](results/analysis/trajectory_comparison_seq00.png)
+
 In the featureless environment, wheel odometry drifts steadily due to heading error from encoder noise. The EKF reduces heading drift via IMU fusion but cannot correct translational errors. ICP provides the strongest drift correction by matching laser scans against the local map, keeping the trajectory close to the SLAM reference even in the relatively featureless hallway.
 
 ### Sequence 01 (Sharp Turns)
+
+![Trajectory Comparison - Sequence 01](results/analysis/trajectory_comparison_seq01.png)
+
 Sharp turns expose the weakness of wheel odometry, which accumulates large heading errors during fast rotations. The EKF excels here because the IMU gyroscope provides accurate angular velocity measurements that correct the heading during turns. ICP also performs well, as the obstacles provide distinctive scan features for matching.
 
 ### Sequence 02 (Smooth Motion)
+
+![Trajectory Comparison - Sequence 02](results/analysis/trajectory_comparison_seq02.png)
+
 With smoother motion over a longer trajectory, drift accumulates gradually for all methods. Wheel odometry shows the worst heading drift (47.8 deg), while EKF also accumulates significant heading error (37.6 deg) in this sequence. ICP maintains better accuracy than both but shows more error than in the other sequences. This suggests that even with scan matching, long trajectories without loop closure will eventually drift.
 
 ### Heading Drift (Start vs End Orientation)
@@ -67,6 +80,18 @@ With smoother motion over a longer trajectory, drift accumulates gradually for a
 | EKF (Wheel+IMU) | Reduced heading drift via IMU fusion, online gyro bias estimation, works in any environment | Still open-loop (no external position correction), translational drift unchanged |
 | ICP (EKF+LiDAR) | LiDAR-based position and heading correction, reduces both translational and rotational drift | Can struggle in featureless environments, sensitive to scan quality, no global correction |
 | SLAM (slam_toolbox) | Loop closure corrects accumulated drift, globally consistent map and trajectory | Requires sufficient features for loop closure detection, higher computational cost |
+
+### Map Quality Comparison
+
+**ICP Maps:**
+![ICP Map - Sequence 00](results/map_icp_seq00.png)
+![ICP Map - Sequence 01](results/map_icp_seq01.png)
+![ICP Map - Sequence 02](results/map_icp_seq02.png)
+
+**SLAM Maps:**
+![SLAM Map - Sequence 00](results/map_slam_seq00.png)
+![SLAM Map - Sequence 01](results/map_slam_seq01.png)
+![SLAM Map - Sequence 02](results/map_slam_seq02.png)
 
 ### Robustness Across Environments
 

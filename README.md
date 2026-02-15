@@ -35,7 +35,6 @@ FRA532-LAB/
     ├── trajectory_slam_seqXX.txt
     ├── map_icp_seqXX.png
     ├── map_slam_seqXX.png
-    ├── discussion.md
     └── analysis/
 ```
 
@@ -52,7 +51,7 @@ FRA532-LAB/
 
 ---
 
-## Installation and Dependencies
+## Installation & Dependencies
 
 - ROS2 Humble
 - Python 3.10+
@@ -227,4 +226,19 @@ ros2 launch lab1 part3_complete.launch.py \
 ros2 launch lab1 plot_analysis.launch.py sequences:="00 01 02"
 ```
 
+---
+
+## Results & Discussion
+
+For a comprehensive analysis of the experimental results, including trajectory comparisons, accuracy metrics, drift analysis, and robustness evaluation across all three sequences, see:
+
+**📊 [Discussion: Comparing Odometry and SLAM Methods](discussion.md)**
+
+This document includes:
+- Accuracy comparison (position error vs SLAM)
+- Drift analysis with trajectory visualizations
+- Heading drift comparison
+- Map quality comparison (ICP vs SLAM)
+- Robustness evaluation across different environments
+- Summary of key findings
 
